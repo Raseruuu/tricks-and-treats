@@ -3,8 +3,8 @@
 **/nikola_src/cache/**
 **/nikola_src/output/**
 .DS_Store
-*.rpyc
-*.save
+**.rpyc
+**.save
 **.rpyb
 
 ### Ren'Py Game Files ###
@@ -17,7 +17,7 @@ game/saves/
 game/**.rpyc
 errors.txt
 traceback.txt
-log.txt
+**.txt
 project.json
 **-dists/
 

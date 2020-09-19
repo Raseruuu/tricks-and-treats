@@ -2,9 +2,41 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 9: invalid syntax
-    Character("" type="narrator")
-                     ^
+File "game/script.rpy", line 13: expected 'word' not found.
+    define ?? = Character("??")
+           ^
+
+File "game/script.rpy", line 47: expected statement.
+    ?? "...."
+    ^
+
+File "game/script.rpy", line 51: expected statement.
+    ?? "..."
+    ^
+
+File "game/script.rpy", line 53: expected statement.
+    ?? "..."
+    ^
+
+File "game/script.rpy", line 62: expected statement.
+    ?? "(no movements)"
+    ^
+
+File "game/script.rpy", line 109: expected statement.
+    ?? "..."
+    ^
+
+File "game/script.rpy", line 127: expected statement.
+    ?? "..."
+    ^
+
+File "game/script.rpy", line 133: expected statement.
+    ?? "..."
+    ^
+
+File "game/script.rpy", line 177: expected statement.
+    ?? "..."
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Sep 20 02:02:53 2020
+Sun Sep 20 02:41:41 2020

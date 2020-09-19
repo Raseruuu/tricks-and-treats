@@ -10,7 +10,7 @@ define a = Character("A")
 define v = Character("Vampire")
 define f = Character("Fox")
 define s = Character("Slime")
-define ?? = Character("??")
+define u = Character("??")
 
 define narrator = Character("Narrator", type='narrator')
 
@@ -44,22 +44,22 @@ label Vampire_1:
     "*The vampire slides down from top of the slides and approaches the medjed.*"
 
     v "Hi."
-    ?? "...."
+    u "...."
     v "A quiet one huh? What's your name?"
     v "My name is [ ] and I'm going to get all the rare candies tonight."
     v  "Now, are you going up against us?"
-    ?? "..."
+    u "..."
     v "Or are you going to stay out of the way?"
-    ?? "..."
+    u "..."
     v "I see how this is."
     v "You don't have many candies so far in your basket…"
     v "hmmmph~!"
     v "I know!"
     v "yo guys, this one is coming with us!"
-    a "What!??"
+    a "What!u"
     v "You heard me, they are now one of our forces."
     v "Say hello to the new recruit"
-    ?? "(no movements)"
+    u "(no movements)"
     v "SEE."
     a "boss I don't think this is a good idea?"
     v "What do you mean by that?!"
@@ -106,7 +106,7 @@ label Fox_1:
     # *fox hides behind the other kids*
     a "Hey! Hello there."
     a "You wanna play as well?"
-    ?? "..."
+    u "..."
     a "Oh come on~"
     f "Are you lost?"
     f "Ah I see."
@@ -124,13 +124,13 @@ label Fox_1:
     # *Candy given
 
     f "Shall we?"
-    ?? "..."
+    u "..."
     a "Hurray! New friend!"
     f "hey keep it down please."
     a "But now we got more friends to share candies with."
     f "hmmmmm"
     f "what do you say?"
-    ?? "..."
+    u "..."
     f "ok then."
     a "Let's gooooo."
     return
@@ -174,7 +174,7 @@ label Slime_1:
     a "iunno"
     s "That's not helping at all!"
     s "Please stop following me...heeee…"
-    ?? "..."
+    u "..."
     s "so...I'm just going...to leave now…"
 
     "Slime's coat is being tugged."
