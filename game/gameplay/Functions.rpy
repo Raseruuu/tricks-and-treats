@@ -1,13 +1,4 @@
 init python:
-    # belongs to the place class
-    def get_Chocolate(self):
-      ammount = self.Chocolate * self.Chocolate_mod[Turn]
-        if(ammount != 0):
-          ammount = ammount + self.Chocolate_mod_ADD[Turn]
-          return ammount
-      return 0.1
-
-
 
     # This belongs to the player class
     self.agent_count = 2

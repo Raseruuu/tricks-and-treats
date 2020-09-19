@@ -28,7 +28,7 @@ label Vampire_1:
     v "hmmmph~!"
     v "I know!"
     v "yo guys, this one is coming with us!"
-    a "What!u"
+    a "What!??"
     v "You heard me, they are now one of our forces."
     v "Say hello to the new recruit"
     u "(no movements)"
