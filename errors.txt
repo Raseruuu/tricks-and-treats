@@ -2,16 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/gameplay/Candy.rpy", line 134: indentation mismatch.
-
-File "game/gameplay/Functions.rpy", line 13: invalid syntax
-        for each in self.my_places
-    
-
-File "game/gameplay/Playerclass.rpy", line 2: invalid syntax
-    global Turn = 0
-                 ^
+File "game/gameplay/Candy.rpy", line 94: invalid syntax
+            self.Chocolate = self.Chocolate + (int)Chocolate_amount
+                                                                   ^
     
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Sep 20 03:33:56 2020
+Sun Sep 20 03:37:09 2020

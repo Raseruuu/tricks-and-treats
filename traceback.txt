@@ -1,22 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 29, in script
-    e ""
-Exception: Sayer 'e' is not defined.
+  File "game/gameplay/Functions.rpy", line 1, in script
+    init python:
+  File "game/gameplay/Functions.rpy", line 4, in <module>
+    self.agent_count = 2
+NameError: name 'self' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 29, in script
-    e ""
-  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 678, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 576, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'e' is not defined.
+  File "game/gameplay/Functions.rpy", line 1, in script
+    init python:
+  File "/Applications/renpy-7.3.5-sdk/renpy/ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Applications/renpy-7.3.5-sdk/renpy/python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/gameplay/Functions.rpy", line 4, in <module>
+    self.agent_count = 2
+NameError: name 'self' is not defined
 
 Darwin-19.6.0-x86_64-i386-64bit
 Ren'Py 7.3.5.606
-Tricks and Treats 1.0
-Sun Sep 20 02:03:17 2020
+ 
+Sun Sep 20 03:42:27 2020
