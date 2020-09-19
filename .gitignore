@@ -17,6 +17,7 @@ game/saves/
 game/**.rpyc
 errors.txt
 traceback.txt
+logs.txt
 **.txt
 project.json
 **-dists/

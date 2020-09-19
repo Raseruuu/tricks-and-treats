@@ -149,7 +149,6 @@ label Slime_1:
     a "Oh it's just another kid."
     s "Another kids my behind. They're not even moving!"
     s "let's get out of here asap."
-
     a "I think it's also collecting candies…"
     s "then let's give it one and leave them be."
     a "Sure thing."
