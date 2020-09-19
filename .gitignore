@@ -5,7 +5,7 @@
 .DS_Store
 *.rpyc
 *.save
-*.rpyb
+**.rpyb
 
 ### Ren'Py Game Files ###
 game/cache/**.**
