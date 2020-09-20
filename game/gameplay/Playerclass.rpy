@@ -15,12 +15,11 @@ init python:
         self.Chocolate = 0
         self.Trick_Supplies = 0
 
-        # This belongs to the player class
         self.agent_count = 2
         self.agents_at_turn = [2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3]
 
         self.my_places = []
-        # Turn is incremented before this function is called
+        
         self.Candy_Corn_mod_place=[
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -205,7 +204,75 @@ init python:
         if(Trick_Supplies_amount != 0):
             Trick_Supplies_amount = Trick_Supplies_amount + self.Trick_Supplies_ADD_place[place_ID][Turn]
             self.Trick_Supplies = self.Trick_Supplies + int(Trick_Supplies_amount)
+#################################################################################
+    def change_mod_Victory_Candy(self,amount,durration,instant,SET):
+        if(SET == True):
+            if(instant == True):
+                for(i = Turn,i <= durration+Turn , i++):
+                    self.Victory_Candy_mod[i] =  amount
+            else:
+                for(i = Turn+1,i <= durration+Turn+1 , i++):
+                    self.Victory_Candy_mod[i] = amount
+        else:
+            if(instant == True):
+                for(i = Turn,i <= durration+Turn , i++):
+                    self.Victory_Candy_mod[i] = self.Victory_Candy_mod[i] * amount
+            else:
+                for(i = Turn+1,i <= durration+Turn+1 , i++):
+                    self.Victory_Candy_mod[i] = self.Victory_Candy_mod[i] * amount
 
+    def change_mod_Candy_Corn(self,amount,durration,instant,SET):
+        if(SET == True):
+            if(instant == True):
+                for(i = Turn,i <= durration+Turn , i++):
+                    self.Candy_Corn_mod[i] =  amount
+            else:
+                for(i = Turn+1,i <= durration+Turn+1 , i++):
+                    self.Candy_Corn_mod[i] = amount
+        else:
+            if(instant == True):
+                for(i = Turn,i <= durration+Turn , i++):
+                    self.Candy_Corn_mod[i] = self.Candy_Corn_mod[i] * amount
+            else:
+                for(i = Turn+1,i <= durration+Turn+1 , i++):
+                    self.Candy_Corn_mod[i] = self.Candy_Corn_mod[i] * amount
+
+
+    def change_mod_Chocolate(self,amount,durration,instant,SET):
+        if(SET == True):
+            if(instant == True):
+                for(i = Turn,i <= durration+Turn , i++):
+                    self.Chocolate_mod[i] =  amount
+            else:
+                for(i = Turn+1,i <= durration+Turn+1 , i++):
+                    self.Chocolate_mod[i] = amount
+        else:
+            if(instant == True):
+                for(i = Turn,i <= durration+Turn , i++):
+                    self.Chocolate_mod[i] = self.Chocolate_mod[i] * amount
+            else:
+                for(i = Turn+1,i <= durration+Turn+1 , i++):
+                    self.Chocolate_mod[i] = self.Chocolate_mod[i] * amount
+
+
+    def change_mod_Trick_Supplies(self,amount,durration,instant,SET):
+        if(SET == True):
+            if(instant == True):
+                for(i = Turn,i <= durration+Turn , i++):
+                    self.Trick_Supplies_mod[i] =  amount
+            else:
+                for(i = Turn+1,i <= durration+Turn+1 , i++):
+                    self.Trick_Supplies_mod[i] = amount
+        else:
+            if(instant == True):
+                for(i = Turn,i <= durration+Turn , i++):
+                    self.Trick_Supplies_mod[i] = self.Trick_Supplies_mod[i] * amount
+            else:
+                for(i = Turn+1,i <= durration+Turn+1 , i++):
+                    self.Trick_Supplies_mod[i] = self.Trick_Supplies_mod[i] * amount
+    
+    
+    # Turn is incremented before this function is called
     def player_turn_end(self):
         self.my_places.clear
         self.agent_count = agents_at_turn[Turn]
@@ -218,50 +285,8 @@ init python:
             self.receive_from_place_Chocolate(each.get_Chocolate,each.ID)
             self.receive_from_place_Trick_Supplies(each.get_Trick_Supplies,each.ID)
 
-    
+    def occupy(self,place_ID):
+        self.agent_count--
+        self.my_places.append(place_ARRAY[place_ID])
+        place_ARRAY[place_ID].occupied = True    
 ###############################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# this segment in the player class:
-  #
-  # self.my_places = []
-  #
-  # def occupy(self,place_ID):
-  #     self.agent_count--
-  #     self.my_places.append(place_ARRAY[place_ID])
-  #     place_ARRAY[place_ID].occupied = True
-  #
-### THIS TYPE OF FUNCTION NEEDS TO BE IN PLAYER TOO and for all resources
-  # def change_mod_Victory_Candy(self,amount,durration,instant,SET):
-  #   if(SET == True):
-  #     if(instant == True):
-  #       for(i = Turn,i <= durration+Turn , i++):
-  #         self.Victory_Candy_mod[i] =  amount
-  #     else:
-  #       for(i = Turn+1,i <= durration+Turn+1 , i++):
-  #         self.Victory_Candy_mod[i] = amount
-  #   else:
-  #     if(instant == True):
-  #       for(i = Turn,i <= durration+Turn , i++):
-  #         self.Victory_Candy_mod[i] = self.Victory_Candy_mod[i] * amount
-  #     else:
-  #       for(i = Turn+1,i <= durration+Turn+1 , i++):
-  #         self.Victory_Candy_mod[i] = self.Victory_Candy_mod[i] * amount
