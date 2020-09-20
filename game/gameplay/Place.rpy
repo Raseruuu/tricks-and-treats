@@ -21,10 +21,28 @@ init python:
             self.Trick_Supplies_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
         # belongs to the place class
+        def get_Victory_Candy(self):
+            amount = self.Victory_Candy * self.Victory_Candy_mod[Turn]
+            if(amount != 0):
+                amount = amount + self.Victory_Candy_mod_ADD[Turn]
+                return amount
+            return 0.1
+        def get_Candy_Corn(self):
+            amount = self.Candy_Corn * self.Candy_Corn_mod[Turn]
+            if(amount != 0):
+                amount = amount + self.Candy_Corn_mod_ADD[Turn]
+                return amount
+            return 0.1
         def get_Chocolate(self):
             amount = self.Chocolate * self.Chocolate_mod[Turn]
             if(amount != 0):
                 amount = amount + self.Chocolate_mod_ADD[Turn]
+                return amount
+            return 0.1
+        def get_Trick_Supplies(self):
+            amount = self.Trick_Supplies * self.Trick_Supplies_mod[Turn]
+            if(amount != 0):
+                amount = amount + self.Trick_Supplies_mod_ADD[Turn]
                 return amount
             return 0.1
     # class Place:
