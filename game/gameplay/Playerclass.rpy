@@ -1,12 +1,5 @@
 
 init python:
-    Turn = 0
-
-    # global place_ARRAY = [
-    #     place_1,place_2,place_3,place_4,place_5,place_6,place_7,
-    #     place_8,place_9,place_10,place_11,place_12,place_13,place_14,
-    #     place_15,place_16]
-
 
     class Player:
       def __init__(self):
@@ -39,6 +32,7 @@ init python:
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
             ]
+        
 
         self.Candy_Corn_ADD_place =[
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
@@ -59,6 +53,12 @@ init python:
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             ]
+
+        self.quest_required_Victory_Candy_mod = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        self.quest_required_Victory_Candy_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        self.quest_reward_Victory_Candy_mod = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        self.quest_reward_Victory_Candy_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
         self.Chocolate_mod_place = [
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -98,6 +98,11 @@ init python:
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             ]
+
+        self.quest_required_Chocolate_mod = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        self.quest_required_Chocolate_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        self.quest_reward_Chocolate_mod = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        self.quest_reward_Chocolate_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         
         self.Trick_Supplies_mod_place =[
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -137,6 +142,11 @@ init python:
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             ]
+        self.quest_required_Trick_Supplies_mod = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        self.quest_required_Trick_Supplies_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        self.quest_reward_Trick_Supplies_mod = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        self.quest_reward_Trick_Supplies_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        
         self.Victory_Candy_mod_place = [
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -176,6 +186,10 @@ init python:
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
             [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
             ]
+        self.quest_required_Victory_Candy_mod = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        self.quest_required_Victory_Candy_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        self.quest_reward_Victory_Candy_mod = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+        self.quest_reward_Victory_Candy_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 
     def receive_from_place_Victory_Candy(self,VC_ammount,place_ID):
