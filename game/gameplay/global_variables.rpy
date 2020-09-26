@@ -9,5 +9,9 @@ init python:
 
     global current_player
 
+    global player_ARRAY = [SwapPlayer,Player1,Player2,Player3,Player4]
+
+    global Hotseat = True
+
 
     
