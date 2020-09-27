@@ -76,15 +76,17 @@ init python:
             return self.description
         def get_formated_info(self,player):
             the_string = self.get_name() + "|" + self.get_description() + "\n" 
-            if(self.get_required_Victory_Candy(player) > 0.9): the_string = the string + "{image=Victory_Candy_text_icon.png}" + " " +  (int)self.get_required_Victory_Candy(player)
-            if(self.get_required_Candy_Corn(player) > 0.9): the_string = the string + "{image=Candy_Corn_text_icon.png}" + " " +  (int)self.get_required_Candy_Corn(player)
-            if(self.get_required_Chocolate(player) > 0.9): the_string = the string + "{image=Chocolate_text_icon.png}" + " " +  (int)self.get_required_Chocolate(player)
-            if(self.get_required_Trick_Supplies(player) > 0.9): the_string = the string + "{image=Trick_Supplies_text_icon.png}" + " " +  (int)self.get_required_Trick_Supplies(player)
+            if self.get_required_Victory_Candy(player) > 0.9: 
+                the_string = the_string + "{image=Victory_Candy_text_icon.png}" + " " +  self.get_required_Victory_Candy(player)
+            if(self.get_required_Candy_Corn(player) > 0.9): 
+                the_string = the_string + "{image=Candy_Corn_text_icon.png}" + " " +  self.get_required_Candy_Corn(player)
+            if(self.get_required_Chocolate(player) > 0.9): the_string = the_string + "{image=Chocolate_text_icon.png}" + " " +  self.get_required_Chocolate(player)
+            if(self.get_required_Trick_Supplies(player) > 0.9): the_string = the_string + "{image=Trick_Supplies_text_icon.png}" + " " +  self.get_required_Trick_Supplies(player)
             the_string = the_string + "\n"
-            if(self.get_reward_Victory_Candy(player) > 0.9): the_string = the string + "{image=Victory_Candy_text_icon.png}" + " " +  (int)self.get_reward_Victory_Candy(player)
-            if(self.get_reward_Candy_Corn(player) > 0.9): the_string = the string + "{image=Candy_Corn_text_icon.png}" + " " +  (int)self.get_reward_Candy_Corn(player)
-            if(self.get_reward_Chocolate(player) > 0.9): the_string = the string + "{image=Chocolate_text_icon.png}" + " " +  (int)self.get_reward_Chocolate(player)
-            if(self.get_reward_Trick_Supplies(player) > 0.9): the_string = the string + "{image=Trick_Supplies_text_icon.png}" + " " +  (int)self.get_reward_Trick_Supplies(player)
+            if(self.get_reward_Victory_Candy(player) > 0.9): the_string = the_string + "{image=Victory_Candy_text_icon.png}" + " " +  self.get_reward_Victory_Candy(player)
+            if(self.get_reward_Candy_Corn(player) > 0.9): the_string = the_string + "{image=Candy_Corn_text_icon.png}" + " " +  self.get_reward_Candy_Corn(player)
+            if(self.get_reward_Chocolate(player) > 0.9): the_string = the_string + "{image=Chocolate_text_icon.png}" + " " +  self.get_reward_Chocolate(player)
+            if(self.get_reward_Trick_Supplies(player) > 0.9): the_string = the_string + "{image=Trick_Supplies_text_icon.png}" + " " +  self.get_reward_Trick_Supplies(player)
             the_string = the_string + "\n"
             the_string = the_string + self.reward_effect_description
             return the_string

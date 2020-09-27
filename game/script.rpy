@@ -19,6 +19,8 @@ define narrator = Character("Narrator", type='narrator')
 
 label start:
 
+    call screen Agent_Placement()
+
     scene bg room
 
     p "Hello!!"

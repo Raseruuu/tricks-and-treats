@@ -2,10 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/gameplay/Candy.rpy", line 94: invalid syntax
-            self.Chocolate = self.Chocolate + (int)Chocolate_amount
-                                                                   ^
+File "game/gameplay/global_variables.rpy", line 15: unexpected indent
+        Hotseat = True
+        ^
     
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Sep 20 03:37:09 2020
+Sat Sep 26 23:23:44 2020
