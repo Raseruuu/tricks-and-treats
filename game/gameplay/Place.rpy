@@ -49,65 +49,65 @@ init python:
         def change_mod_Victory_Candy(self,amount,durration,instant,SET):
             if(SET == True):
                 if(instant == True):
-                    for i in range(Turn,durration+Turn+1):
+                    for(i = Turn,i <= durration+Turn , i++):
                         self.Victory_Candy_mod[i] =  amount
                 else:
-                    for i in range(Turn+1,durration+Turn+2):
+                    for(i = Turn+1,i <= durration+Turn+1 , i++):
                         self.Victory_Candy_mod[i] = amount
             else:
                 if(instant == True):
-                    for i in range(Turn,durration+Turn+1):
+                    for(i = Turn,i <= durration+Turn , i++):
                         self.Victory_Candy_mod[i] = self.Victory_Candy_mod[i] * amount
                 else:
-                    for i in range(Turn+1,durration+Turn+2):
+                    for(i = Turn+1,i <= durration+Turn+1 , i++):
                         self.Victory_Candy_mod[i] = self.Victory_Candy_mod[i] * amount
 
         def change_mod_Candy_Corn(self,amount,durration,instant,SET):
             if(SET == True):
                 if(instant == True):
-                    for i in range(Turn,durration+Turn+1):
+                    for(i = Turn,i <= durration+Turn , i++):
                         self.Candy_Corn_mod[i] =  amount
                 else:
-                    for i in range(Turn+1,durration+Turn+2):
+                    for(i = Turn+1,i <= durration+Turn+1 , i++):
                         self.Candy_Corn_mod[i] = amount
             else:
                 if(instant == True):
-                    for i in range(Turn,durration+Turn+1):
+                    for(i = Turn,i <= durration+Turn , i++):
                         self.Candy_Corn_mod[i] = self.Candy_Corn_mod[i] * amount
                 else:
-                    for i in range(Turn+1,durration+Turn+2):
+                    for(i = Turn+1,i <= durration+Turn+1 , i++):
                         self.Candy_Corn_mod[i] = self.Candy_Corn_mod[i] * amount
 
 
         def change_mod_Chocolate(self,amount,durration,instant,SET):
             if(SET == True):
                 if(instant == True):
-                    for i in range(Turn,durration+Turn+1):
+                    for(i = Turn,i <= durration+Turn , i++):
                         self.Chocolate_mod[i] =  amount
                 else:
-                    for i in range(Turn+1,durration+Turn+2):
+                    for(i = Turn+1,i <= durration+Turn+1 , i++):
                         self.Chocolate_mod[i] = amount
             else:
                 if(instant == True):
-                    for i in range(Turn,durration+Turn+1):
+                    for(i = Turn,i <= durration+Turn , i++):
                         self.Chocolate_mod[i] = self.Chocolate_mod[i] * amount
                 else:
-                    for i in range(Turn+1,durration+Turn+2):
+                    for(i = Turn+1,i <= durration+Turn+1 , i++):
                         self.Chocolate_mod[i] = self.Chocolate_mod[i] * amount
 
 
         def change_mod_Trick_Supplies(self,amount,durration,instant,SET):
             if(SET == True):
                 if(instant == True):
-                    for i in range(Turn,durration+Turn+1):
+                    for(i = Turn,i <= durration+Turn , i++):
                         self.Trick_Supplies_mod[i] =  amount
                 else:
-                    for i in range(Turn+1,durration+Turn+2):
+                    for(i = Turn+1,i <= durration+Turn+1 , i++):
                         self.Trick_Supplies_mod[i] = amount
             else:
                 if(instant == True):
-                    for i in range(Turn,durration+Turn+1):
+                    for(i = Turn,i <= durration+Turn , i++):
                         self.Trick_Supplies_mod[i] = self.Trick_Supplies_mod[i] * amount
                 else:
-                    for i in range(Turn+1,durration+Turn+2):
+                    for(i = Turn+1,i <= durration+Turn+1 , i++):
                         self.Trick_Supplies_mod[i] = self.Trick_Supplies_mod[i] * amount
