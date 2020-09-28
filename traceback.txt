@@ -1,26 +1,71 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/gameplay/global_variables.rpy", line 1, in script
-    init -1 python:
-  File "game/gameplay/global_variables.rpy", line 11, in <module>
-    place_1,place_2,place_3,place_4,place_5,place_6,place_7,
-NameError: name 'place_1' is not defined
+  File "game/script.rpy", line 22, in script
+    call screen Agent_Placement()
+  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/gameplay/screen_Agent_Placement.rpy", line 38, in execute
+    screen Agent_Placement():
+  File "game/gameplay/screen_Agent_Placement.rpy", line 38, in execute
+    screen Agent_Placement():
+  File "game/gameplay/screen_Agent_Placement.rpy", line 41, in execute
+    for each in range(1,13):
+  File "game/gameplay/screen_Agent_Placement.rpy", line 42, in execute
+    imagebutton:
+  File "game/gameplay/screen_Agent_Placement.rpy", line 42, in keywords
+    imagebutton:
+TypeError: coercing to Unicode: need string or buffer, int found
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/gameplay/global_variables.rpy", line 1, in script
-    init -1 python:
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/gameplay/global_variables.rpy", line 11, in <module>
-    place_1,place_2,place_3,place_4,place_5,place_6,place_7,
-NameError: name 'place_1' is not defined
+  File "game/script.rpy", line 22, in script
+    call screen Agent_Placement()
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1949, in execute
+    self.call("execute")
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1937, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\statements.py", line 277, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 2905, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
+    callback(self)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
+    self.update()
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
+    self.screen.function(**self.scope)
+  File "game/gameplay/screen_Agent_Placement.rpy", line 38, in execute
+    screen Agent_Placement():
+  File "game/gameplay/screen_Agent_Placement.rpy", line 38, in execute
+    screen Agent_Placement():
+  File "game/gameplay/screen_Agent_Placement.rpy", line 41, in execute
+    for each in range(1,13):
+  File "game/gameplay/screen_Agent_Placement.rpy", line 42, in execute
+    imagebutton:
+  File "game/gameplay/screen_Agent_Placement.rpy", line 42, in keywords
+    imagebutton:
+  File "<screen language>", line 43, in <module>
+TypeError: coercing to Unicode: need string or buffer, int found
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
- 
-Sat Sep 26 23:23:54 2020
+Tricks and Treats 1.0
+Sun Sep 27 22:37:10 2020
