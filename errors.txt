@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gameplay/screen_Agent_Placement.rpy", line 41: Line is indented, but the preceding add statement does not expect a block. Please check this line's indentation.
-    for each in range(1,13):
-    ^
+File "game/gameplay/screen_Character_Selection.rpy", line 54: u'imagebutton' is not a keyword argument or valid child for the imagebutton statement.
+    imagebutton at size_changer_button:
+               ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Sep 27 22:36:53 2020
+Tue Sep 29 03:07:00 2020
