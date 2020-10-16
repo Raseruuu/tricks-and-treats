@@ -19,7 +19,8 @@ define narrator = Character("Narrator", type='narrator')
 # The game starts here.
 
 label start:
-    call screen Character_Selection()
+    call screen Lobby_single_player()
+
     call screen Agent_Placement()
 
     scene bg room

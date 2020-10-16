@@ -5,6 +5,9 @@ image select_slime_img =  "sketch_slime_small.png"
 
 init python:
     Choice_nummber = 0
+    def character_change(slot_number,character_name):
+        global slots
+        slots[slot_number] = character_name
 
 transform size_changer_button:
     on idle:
@@ -13,13 +16,14 @@ transform size_changer_button:
         linear 0.3 zoom 0.4
 
 
+
 screen Character_Selection():
     add "Black_image.png"
 
     imagebutton at size_changer_button:
         idle "select_kitsune_img"
         hover "select_kitsune_img"
-        action SetVariable("Choice_nummber" , 3) , Return()
+        action Function(character_change,[current_select,"Kitsune"]) , Return()
         
         hovered Function(Michael, "A sheltered Girl living in the forest, desireing to share the candy she gathers with everyone.", False, False)
         
