@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gameplay/screen_Character_Selection.rpy", line 54: u'imagebutton' is not a keyword argument or valid child for the imagebutton statement.
-    imagebutton at size_changer_button:
-               ^
+File "game/gameplay/screen_Character_Selection.rpy", line 86: u'size' is not a keyword argument or valid child for the textbutton statement.
+    size 1000,200
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Sep 29 03:07:00 2020
+Sat Oct 17 11:09:09 2020

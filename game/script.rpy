@@ -19,11 +19,15 @@ define narrator = Character("Narrator", type='narrator')
 # The game starts here.
 
 label start:
-    call screen Lobby_single_player()
 
-    call screen Agent_Placement()
+    #call screen Agent_Placement
+
+    while single_player_lobby_loop == True:
+        call screen Lobby_single_player()
+    $single_player_lobby_loop = True
 
     scene bg room
+
 
     p "Hello!!"
     "World!"

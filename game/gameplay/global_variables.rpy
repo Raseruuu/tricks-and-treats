@@ -11,5 +11,22 @@ init -1 python:
     #player_ARRAY = [SwapPlayer,Player1,Player2,Player3,Player4]
     Hotseat = True
 
+    global Max_Turns
+    Max_Turns = 8
+    global Player_count
+    Player_count = 2
+    global slots 
+    slots = ["Random","Random","Random","Random"]
+    global current_select
+    current_select = -1
+    slot_position_4 = []
+
+    global single_player_lobby_loop 
+    single_player_lobby_loop = True
+
+    Choice_nummber = 0
+    def character_change(slot_number,character_name):
+        global slots
+        slots[slot_number] = character_name
 
     

@@ -1,52 +1,67 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/gameplay/screen_Lobby.rpy", line 21, in prepare_screen
+While running game code:
+  File "game/script.rpy", line 26, in script
+    call screen Lobby_single_player()
+  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/gameplay/screen_Character_Selection.rpy", line 75, in execute
     screen Lobby_single_player:
-  File "game/gameplay/screen_Lobby.rpy", line 21, in prepare
+  File "game/gameplay/screen_Character_Selection.rpy", line 75, in execute
     screen Lobby_single_player:
-  File "game/gameplay/screen_Lobby.rpy", line 22, in prepare
-    for each in range(0,Player_count):
-  File "game/gameplay/screen_Lobby.rpy", line 22, in prepare
-    for each in range(0,Player_count):
-  File "game/gameplay/screen_Lobby.rpy", line 23, in prepare
-    imagebutton:
-  File "game/gameplay/screen_Lobby.rpy", line 23, in prepare
-    imagebutton:
-SyntaxError: invalid syntax (game/gameplay/screen_Lobby.rpy, line 29)
+  File "game/gameplay/screen_Character_Selection.rpy", line 78, in execute
+    textbutton "Start Game":
+  File "game/gameplay/screen_Character_Selection.rpy", line 78, in keywords
+    textbutton "Start Game":
+NameError: name 'each' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 578, in main
-    run(restart)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 94, in run
-    renpy.display.screen.prepare_screens()
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 931, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/gameplay/screen_Lobby.rpy", line 21, in prepare_screen
+  File "game/script.rpy", line 26, in script
+    call screen Lobby_single_player()
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1949, in execute
+    self.call("execute")
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 1937, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\statements.py", line 277, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 531, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 2905, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
+    callback(self)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
+    self.update()
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
+    self.screen.function(**self.scope)
+  File "game/gameplay/screen_Character_Selection.rpy", line 75, in execute
     screen Lobby_single_player:
-  File "game/gameplay/screen_Lobby.rpy", line 21, in prepare
+  File "game/gameplay/screen_Character_Selection.rpy", line 75, in execute
     screen Lobby_single_player:
-  File "game/gameplay/screen_Lobby.rpy", line 22, in prepare
-    for each in range(0,Player_count):
-  File "game/gameplay/screen_Lobby.rpy", line 22, in prepare
-    for each in range(0,Player_count):
-  File "game/gameplay/screen_Lobby.rpy", line 23, in prepare
-    imagebutton:
-  File "game/gameplay/screen_Lobby.rpy", line 23, in prepare
-    imagebutton:
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\pyanalysis.py", line 703, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\pyanalysis.py", line 687, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
-    raise e
-SyntaxError: invalid syntax (game/gameplay/screen_Lobby.rpy, line 29)
+  File "game/gameplay/screen_Character_Selection.rpy", line 78, in execute
+    textbutton "Start Game":
+  File "game/gameplay/screen_Character_Selection.rpy", line 78, in keywords
+    textbutton "Start Game":
+  File "<screen language>", line 82, in <module>
+NameError: name 'each' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Tricks and Treats 1.0
-Fri Oct 16 02:05:44 2020
+Sat Oct 17 11:08:20 2020
