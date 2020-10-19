@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/gameplay/screen_Character_Selection.rpy", line 86: u'size' is not a keyword argument or valid child for the textbutton statement.
-    size 1000,200
-        ^
+File "game/script.rpy", line 32: invalid syntax
+    player_1 = new Player(slots[0])
+                         ^
+    
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Oct 17 11:09:09 2020
+Mon Oct 19 10:19:22 2020
