@@ -2,7 +2,11 @@
 init python:
 
     class Player:
-      def __init__(self):
+      def __init__(self,character):
+        if character != "Random":
+            self.character = character
+        else :
+            self.character = assign_via_random()
         self.Victory_Candy = 0
         self.Candy_Corn = 0
         self.Chocolate = 0

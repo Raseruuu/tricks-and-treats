@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/gameplay/screen_Agent_Placement.rpy", line 41: Line is indented, but the preceding add statement does not expect a block. Please check this line's indentation.
-    for each in range(1,13):
-    ^
+File "game/script.rpy", line 32: invalid syntax
+    player_1 = new Player(slots[0])
+                         ^
+    
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Sep 27 22:36:53 2020
+Mon Oct 19 10:19:22 2020
