@@ -33,13 +33,16 @@ init -1 python:
     taken_characters = []
     def check_character_avalible(character_name):
         if "character_name" in slots:
-            return True
-        else :
             return False
+        else :
+            return True
     import random 
     random.seed()
     def assign_via_random():
         assign_i = random.randint(1, 4)
+        print("Random Value:")
+        print(assign_i)
+        
         if(assign_i == 1):
             if check_character_avalible("Succubus"):
                 return "Succubus"

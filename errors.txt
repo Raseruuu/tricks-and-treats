@@ -2,10 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 32: invalid syntax
-    player_1 = new Player(slots[0])
-                         ^
-    
+File "game/gameplay/screen_Agent_Placement.rpy", line 63: expected statement.
+    xds = 0.1
+        ^
+
+File "game/gameplay/screen_Agent_Placement.rpy", line 64: expected statement.
+    yds = 0.04
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Oct 19 10:19:22 2020
+Wed Oct 21 14:03:24 2020

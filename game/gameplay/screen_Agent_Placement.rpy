@@ -55,16 +55,95 @@ init:
     image Area13_idle = map_location_prefix + "Area13_dark.png"
     image Area13_selected = map_location_prefix + "Area13_base.png"
 
-    image down_left = im.Scale("multiplayer down left.png",451,304)
-    image down_right = im.Scale("multiplayer down right.png",451,304)
-    image up_left = im.Scale("multiplayer up left.png",451,304)
-    image up_right = im.Scale("multiplayer up right.png",451,304)
+    #image down_left = im.Scale("multiplayer down left.png",451,304)
+    #image down_right = im.Scale("multiplayer down right.png",451,304)
+    #image up_left = im.Scale("multiplayer up left.png",451,304)
+    #image up_right = im.Scale("multiplayer up right.png",451,304)
+init python:
+    xds = 0.05
+    yds = -0.05
+    SDx = 0.81 - 0.125
+    SDy = 1 - 0.11
+    LDx = 0.025
 
 screen Base_UI():
-    add "down_left" anchor(0.0,1.0) xalign 0.0 yalign 1.0
-    add "down_right" anchor(1.0,1.0) xalign 1.0 yalign 1.0
-    add "up_left"  anchor(0.0,0.0) xalign 0.0 yalign 0.0
-    add "up_right" anchor(1.0,0.0) xalign 1.0 yalign 0.0
+    
+    add player_ARRAY[0].character+" "+"up left.png"  anchor(0.0,0.0) xalign 0.0 yalign 0.0
+
+    add "golden lollipop small_thin line.png" xalign 0.125 yalign 0.08 + yds size(30,40) anchor(0.5,0.5)
+    label "1" xalign 0.125 + LDx yalign 0.08 +yds anchor(0.5,0.5)
+
+    add "candy corn small_thin line.png" xalign 0.125 + xds yalign 0.08 +yds size(40,40) anchor(0.5,0.5)
+    label "2" xalign 0.125 + xds + LDx yalign 0.08 +yds anchor(0.5,0.5)
+
+    add "candy corn small_thin line.png" xalign 0.125 yalign 0.08 size(40,40) anchor(0.5,0.5)
+    label "3" xalign 0.125 + LDx yalign 0.08 anchor(0.5,0.5)
+
+    add "chocolate small_thin line.png" xalign 0.125 + xds yalign 0.08 size(50,40) anchor(0.5,0.5)
+    label "4" xalign 0.125 + xds + LDx yalign 0.08 anchor(0.5,0.5)
+
+    add "Agents_icon.png" xalign 0.125 + xds  yalign 0.135 size(50,50) anchor(0.5,0.5)
+    label "5" xalign 0.134 + xds + LDx yalign 0.145 anchor(0.5,0.5) 
+
+    add "1st Turn icon.png" xalign 0.084 + xds  yalign 0.13 size(70,70) anchor(0.5,0.5)
+
+    add "Cards_icon.png" xalign 0.2 + xds  yalign 0.03 size(100,100) anchor(0.5,0.5)
+    label "6" xalign 0.19 + xds  yalign 0.06 anchor(0.5,0.5) 
+
+    
+
+    ###########################################################################
+    add player_ARRAY[1].character+" "+"up right.png" anchor(1.0,0.0) xalign 1.0 yalign 0.0
+
+    add "golden lollipop small_thin line.png" xalign 0.125 + SDx yalign 0.08 + yds size(30,40) anchor(0.5,0.5)
+    label "1" xalign 0.125 + LDx + SDx yalign 0.08 +yds anchor(0.5,0.5)
+
+    add "candy corn small_thin line.png" xalign 0.125 + xds + SDx yalign 0.08 +yds size(40,40) anchor(0.5,0.5)
+    label "2" xalign 0.125 + xds + LDx + SDx yalign 0.08 +yds anchor(0.5,0.5)
+
+    add "candy corn small_thin line.png" xalign 0.125 + SDx yalign 0.08 size(40,40) anchor(0.5,0.5)
+    label "3" xalign 0.125 + LDx + SDx yalign 0.08 anchor(0.5,0.5)
+
+    add "chocolate small_thin line.png" xalign 0.125 + xds + SDx yalign 0.08 size(50,40) anchor(0.5,0.5)
+    label "4" xalign 0.125 + xds + LDx + SDx yalign 0.08 anchor(0.5,0.5)
+
+    add "1st Turn icon.png" xalign 0.165 + xds + SDx - 0.035  yalign 0.13 size(70,70) anchor(0.5,0.5)
+
+    add "Agents_icon.png" xalign 0.125 + xds + SDx - 0.035   yalign 0.135 size(50,50) anchor(0.5,0.5)
+    label "5" xalign 0.134 + xds + LDx + SDx - 0.105         yalign 0.145 anchor(0.5,0.5) 
+    
+    ############################################################################
+    add "Slime"+" "+"down left.png" anchor(0.0,1.0) xalign 0.0 yalign 1.0
+
+    add "golden lollipop small_thin line.png" xalign 0.125 yalign 0.08 + yds + SDy size(30,40) anchor(0.5,0.5)
+    label "1" xalign 0.125 + LDx yalign 0.08 +yds + SDy anchor(0.5,0.5)
+
+    add "candy corn small_thin line.png" xalign 0.125 + xds yalign 0.08 +yds + SDy size(40,40) anchor(0.5,0.5)
+    label "2" xalign 0.125 + xds + LDx yalign 0.08 +yds + SDy anchor(0.5,0.5)
+
+    add "candy corn small_thin line.png" xalign 0.125 yalign 0.08 + SDy size(40,40) anchor(0.5,0.5)
+    label "3" xalign 0.125 + LDx yalign 0.08 + SDy anchor(0.5,0.5)
+
+    add "chocolate small_thin line.png" xalign 0.125 + xds yalign 0.08 + SDy size(50,40) anchor(0.5,0.5)
+    label "4" xalign 0.125 + xds + LDx yalign 0.08 + SDy anchor(0.5,0.5)
+
+    add "1st Turn icon.png" xalign 0.084 + xds  yalign 0.145 + SDy - 0.155 size(70,70) anchor(0.5,0.5)
+
+    add "Agents_icon.png" xalign 0.125 + xds  yalign 0.135 + SDy - 0.155 size(50,50) anchor(0.5,0.5)
+    label "5" xalign 0.134 + xds + LDx yalign 0.145 + SDy - 0.17 anchor(0.5,0.5) 
+    
+
+    
+    
+
+    
+    
+    if Player_count > 2:
+        add player_ARRAY[2].character+" "+"down left.png" anchor(0.0,1.0) xalign 0.0 yalign 1.0
+    if Player_count > 3:
+        add player_ARRAY[3].character+" "+"down right.png" anchor(1.0,1.0) xalign 1.0 yalign 1.0
+
+    
 
 screen Agent_Placement():
     

@@ -3,10 +3,11 @@ init python:
 
     class Player:
       def __init__(self,character):
-        if character != "Random":
-            self.character = character
-        else :
+        if character == "Random":
             self.character = assign_via_random()
+            
+        else :
+            self.character = character
         self.Victory_Candy = 0
         self.Candy_Corn = 0
         self.Chocolate = 0
