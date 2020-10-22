@@ -31,8 +31,14 @@ label start:
     python: 
         global slots
         player_1 = Player(slots[0])
+        print (player_1.character)
+        
         player_2 = Player(slots[1])
         player_ARRAY = [player_1,player_2]
+        print(player_ARRAY[0].character)
+        print(player_ARRAY[0].character)
+        print(player_ARRAY[0].character)
+        print(player_ARRAY[0].character)
         if Player_count > 2:
             player_3 = Player(slots[2])
             player_ARRAY.append(player_3)
@@ -41,6 +47,8 @@ label start:
             player_ARRAY.append(player_4)
 
         
+
+    call screen Agent_Placement()
 
     scene bg room
 
