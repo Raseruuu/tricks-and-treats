@@ -1,4 +1,4 @@
-init python:
+init -3 python:
     class Place:
         def __init__(self,name,ID,Victory_Candy,Candy_Corn,Chocolate,Trick_Supplies):
             self.name = name
