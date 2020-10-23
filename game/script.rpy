@@ -20,6 +20,8 @@ define narrator = Character("Narrator", type='narrator')
 
 # The game starts here.
 
+
+
 label start:
     $taken_characters = [] 
     #call screen Agent_Placement

@@ -65,6 +65,8 @@ init python:
     SDx = 0.81 - 0.125
     SDy = 1 - 0.11
     LDx = 0.025
+    Card_x = 0.52
+    Card_y = 0.94
 
 screen Base_UI():
     
@@ -111,37 +113,68 @@ screen Base_UI():
 
     add "Agents_icon.png" xalign 0.125 + xds + SDx - 0.035   yalign 0.135 size(50,50) anchor(0.5,0.5)
     label "5" xalign 0.134 + xds + LDx + SDx - 0.105         yalign 0.145 anchor(0.5,0.5) 
+
+    add "Cards_icon.png" xalign 0.2 + xds + Card_x  yalign 0.03 size(100,100) anchor(0.5,0.5)
+    label "6" xalign 0.19 + xds + Card_x  yalign 0.06 anchor(0.5,0.5) 
     
     ############################################################################
-    add "Slime"+" "+"down left.png" anchor(0.0,1.0) xalign 0.0 yalign 1.0
-
-    add "golden lollipop small_thin line.png" xalign 0.125 yalign 0.08 + yds + SDy size(30,40) anchor(0.5,0.5)
-    label "1" xalign 0.125 + LDx yalign 0.08 +yds + SDy anchor(0.5,0.5)
-
-    add "candy corn small_thin line.png" xalign 0.125 + xds yalign 0.08 +yds + SDy size(40,40) anchor(0.5,0.5)
-    label "2" xalign 0.125 + xds + LDx yalign 0.08 +yds + SDy anchor(0.5,0.5)
-
-    add "candy corn small_thin line.png" xalign 0.125 yalign 0.08 + SDy size(40,40) anchor(0.5,0.5)
-    label "3" xalign 0.125 + LDx yalign 0.08 + SDy anchor(0.5,0.5)
-
-    add "chocolate small_thin line.png" xalign 0.125 + xds yalign 0.08 + SDy size(50,40) anchor(0.5,0.5)
-    label "4" xalign 0.125 + xds + LDx yalign 0.08 + SDy anchor(0.5,0.5)
-
-    add "1st Turn icon.png" xalign 0.084 + xds  yalign 0.145 + SDy - 0.155 size(70,70) anchor(0.5,0.5)
-
-    add "Agents_icon.png" xalign 0.125 + xds  yalign 0.135 + SDy - 0.155 size(50,50) anchor(0.5,0.5)
-    label "5" xalign 0.134 + xds + LDx yalign 0.145 + SDy - 0.17 anchor(0.5,0.5) 
-    
-
-    
-    
-
-    
-    
     if Player_count > 2:
         add player_ARRAY[2].character+" "+"down left.png" anchor(0.0,1.0) xalign 0.0 yalign 1.0
+        
+
+        add "golden lollipop small_thin line.png" xalign 0.125 yalign 0.08 + yds + SDy size(30,40) anchor(0.5,0.5)
+        label "1" xalign 0.125 + LDx yalign 0.08 +yds + SDy anchor(0.5,0.5)
+
+        add "candy corn small_thin line.png" xalign 0.125 + xds yalign 0.08 +yds + SDy size(40,40) anchor(0.5,0.5)
+        label "2" xalign 0.125 + xds + LDx yalign 0.08 +yds + SDy anchor(0.5,0.5)
+
+        add "candy corn small_thin line.png" xalign 0.125 yalign 0.08 + SDy size(40,40) anchor(0.5,0.5)
+        label "3" xalign 0.125 + LDx yalign 0.08 + SDy anchor(0.5,0.5)
+
+        add "chocolate small_thin line.png" xalign 0.125 + xds yalign 0.08 + SDy size(50,40) anchor(0.5,0.5)
+        label "4" xalign 0.125 + xds + LDx yalign 0.08 + SDy anchor(0.5,0.5)
+
+        add "1st Turn icon.png" xalign 0.084 + xds  yalign 0.145 + SDy - 0.155 size(70,70) anchor(0.5,0.5)
+
+        add "Agents_icon.png" xalign 0.125 + xds  yalign 0.135 + SDy - 0.155 size(50,50) anchor(0.5,0.5)
+        label "5" xalign 0.134 + xds + LDx yalign 0.145 + SDy - 0.17 anchor(0.5,0.5) 
+
+        add "Cards_icon.png" xalign 0.2 + xds  yalign 0.03 + Card_y size(100,100) anchor(0.5,0.5)
+        label "6" xalign 0.19 + xds  yalign Card_y anchor(0.5,0.5) 
+    ############################################################################
+
     if Player_count > 3:
         add player_ARRAY[3].character+" "+"down right.png" anchor(1.0,1.0) xalign 1.0 yalign 1.0
+    
+
+        add "golden lollipop small_thin line.png" xalign 0.125 + SDx yalign 0.08 + yds + SDy size(30,40) anchor(0.5,0.5)
+        label "1" xalign 0.125 + LDx + SDx yalign 0.08 +yds + SDy anchor(0.5,0.5)
+
+        add "candy corn small_thin line.png" xalign 0.125 + xds + SDx yalign 0.08 +yds + SDy size(40,40) anchor(0.5,0.5)
+        label "2" xalign 0.125 + xds + LDx + SDx yalign 0.08 +yds + SDy anchor(0.5,0.5)
+
+        add "candy corn small_thin line.png" xalign 0.125 + SDx yalign 0.08 + SDy size(40,40) anchor(0.5,0.5)
+        label "3" xalign 0.125 + LDx + SDx yalign 0.08 + SDy anchor(0.5,0.5)
+
+        add "chocolate small_thin line.png" xalign 0.125 + xds + SDx yalign 0.08 + SDy size(50,40) anchor(0.5,0.5)
+        label "4" xalign 0.125 + xds + LDx + SDx yalign 0.08 + SDy anchor(0.5,0.5)
+
+        add "1st Turn icon.png" xalign 0.084 + xds  yalign 0.145 + SDy - 0.155 size(70,70) anchor(0.5,0.5)
+
+        add "Agents_icon.png" xalign 0.09 + xds + SDx  yalign 0.135 + SDy - 0.155 size(50,50) anchor(0.5,0.5)
+        label "5" xalign 0.03 + xds + LDx + SDx yalign 0.145 + SDy - 0.17 anchor(0.5,0.5) 
+
+        add "Cards_icon.png" xalign 0.2 + xds + Card_x  yalign 0.03 + Card_y size(100,100) anchor(0.5,0.5)
+        label "6" xalign 0.19 + xds + Card_x  yalign  Card_y  anchor(0.5,0.5) 
+    
+
+    
+    
+
+    
+    
+    
+    
 
     
 
