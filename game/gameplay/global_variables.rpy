@@ -1,5 +1,8 @@
 init -1 python:
 
+    import random 
+    random.seed()
+
     # This is global Variables and Functions.
     global Turn 
     global place_ARRAY
@@ -8,11 +11,7 @@ init -1 python:
     global player_ARRAY 
     Turn = 0
     #place_ARRAY = [place_1,place_2,place_3,place_4,place_5,place_6,place_7,place_8,place_9,place_10,place_11,place_12,place_13,place_14,place_15,place_16] 
-<<<<<<< HEAD
-    player_ARRAY = [SwapPlayer,Player1,Player2,Player3,Player4]
-=======
  
->>>>>>> master
     Hotseat = True
 
     global Max_Turns
@@ -28,6 +27,14 @@ init -1 python:
     global single_player_lobby_loop 
     single_player_lobby_loop = True
 
+    qDeck_Town = [q0,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15]
+    qDeck_Forest = [q16,q17,q18,q19,q20,q21,q22,q23]
+    import copy
+    Used_Town_Deck = copy.deepcopy(qDeck_Town)
+    random.shuffle(Used_Town_Deck)
+
+
+
     Choice_nummber = 0
     def character_change(slot_number,character_name):
         global slots
@@ -40,8 +47,11 @@ init -1 python:
             return False
         else :
             return True
-    import random 
-    random.seed()
+
+
+    
+
+
     def assign_via_random():
         assign_i = random.randint(1, 4)
         print("Random Value:")

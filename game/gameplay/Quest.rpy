@@ -1,4 +1,4 @@
-init python:
+init -2 python:
     class Quest:
         
         def __init__(self,ID,name,description,requirements,FOREST,LABEL,rewards,reward_effect_description):
@@ -90,3 +90,47 @@ init python:
             the_string = the_string + "\n"
             the_string = the_string + self.reward_effect_description
             return the_string
+###############################################################################################
+##########################################################################################################
+#############################################################################################################
+#                                      QUEST OBJECTS 
+#############################################################################################################
+##########################################################################################################
+###############################################################################################
+    # ID,name,description,requirements,FOREST,LABEL,rewards,reward_effect_description
+    #rquirements[Victory_Candy , Candy_Corn , Chocolate , Trick_Supplies]
+    #rewards[Victory_Candy , Candy_Corn , Chocolate , Trick_Supplies , Reward Effect Function]
+    def do_nothing():
+        return True
+
+    q0 =  Quest(0 , "Investigate the Ghost House"       ,"Parents set up a ghost house can you get through?"  ,[0,0,8,0] ,False,"L1" ,[4,2,0,0,do_nothing],  "No effects in this version")
+    q1 =  Quest(1 , "Lone kid at the playground?"       ,"The kid there hasn't moved for 3 hours now?!"       ,[4,6,6,0] ,False,"L2" ,[4,6,6,0,do_nothing],  "No effects in this version")
+    q2 =  Quest(2 , "Odd Sightings at the train Station","No , it's not drunk people."                        ,[0,0,0,0] ,False,"L3" ,[2,0,0,0,do_nothing],  "No effects in this version")
+    q3 =  Quest(3 , "Bribeing kids"                     ,"Give them Candy , to get more Candy."               ,[2,0,0,0] ,False,"L4" ,[0,4,4,0,do_nothing],  "No effects in this version")
+    q4 =  Quest(4 , "School at Night"                   ,"Lot's of scarry stuff."                             ,[0,4,0,4] ,False,"L5" ,[3,0,3,0,do_nothing],  "No effects in this version")   
+    q5 =  Quest(5 , "Placeholder Text"                  ,"Placeholder Description"                            ,[1,1,1,1] ,False,"L6" ,[1,1,1,1,do_nothing],  "No effects in this version")
+    q6 =  Quest(6 , "Codeing Quests the true Horror"    ,"I want to get out."                                 ,[0,0,1,0] ,False,"L7" ,[0,0,1,0,do_nothing],  "No effects in this version")
+    q7 =  Quest(7 , "Going EA headquaters"              ,"Explore Hell on earth."                             ,[0,0,0,10],False,"L8" ,[0,0,0,0,do_nothing],  "No effects in this version not even lootboxes")
+    q8 =  Quest(8 , "Potatoe"                           ,"Why does Kisa need a server?"                       ,[0,0,0,0] ,False,"L9" ,[1,1,1,1,do_nothing],  "No effects in this version")
+    q9 =  Quest(9 , "a"                                 ,"The cutest thing I have ever seen."                 ,[0,10,0,0],False,"L10",[5,0,1,0,do_nothing],  "No effects in this version")
+    q10 = Quest(10, "Investigate Ghost Lights"          ,"Blueish lights dance arround at the Cemetary?"      ,[0,8,0,0] ,False,"L11",[3,4,2,0,do_nothing],  "No effects in this version")
+    q11 = Quest(11, "Retive the Stolen Candy"           ,"How did it get stolen?!"                            ,[0,6,0,4] ,False,"L12",[5,0,0,0,do_nothing],  "No effects in this version")
+    q12 = Quest(12, "Ghost Attack"                      ,"People can't punch ghosts but you are magical righ?",[0,3,0,3] ,False,"L13",[3,0,0,0,do_nothing],  "No effects in this version")
+    q13 = Quest(13, "What lurks in the sewers"          ,"Greenish Slime? Clowns? Candy?"                     ,[0,12,0,2],False,"L14",[10,0,0,0,do_nothing], "No effects in this version")
+
+    q14 = Quest(14, "Scareing Parents"                  ,"Let out the monster within you."                    ,[0,0,0,4] ,False,"L15",[2,0,2,0,do_nothing],  "No effects in this version")
+
+    q15 = Quest(15,"Monster Ball"                      ,"Infiltrate a costume party, and steal the candy."   ,[0,0,0,0] ,False,"L16",[0,8,0,0,do_nothing],  "No effects in this version")
+   
+    q16 = Quest(16, "Forest Quest"                      ,"Wander off into the haunted(?) forest"              ,[0,8,2,0] ,True ,"L17",[7,0,0,0,do_nothing],  "No effects in this version") #1
+    q17 = Quest(17, "Forest Quest"                      ,"Wander off into the haunted(?) forest"              ,[4,6,6,4] ,True ,"L18",[5,2,2,10,do_nothing], "No effects in this version") #2
+    q18 = Quest(18, "Forest Quest"                      ,"Wander off into the haunted(?) forest"              ,[0,0,0,0] ,True ,"L19",[3,0,0,0,do_nothing],  "No effects in this version") #3
+    q19 = Quest(19, "Forest Quest"                      ,"Wander off into the haunted(?) forest"              ,[0,12,0,0],True ,"L20",[5,4,2,2,do_nothing],  "No effects in this version") #4
+    q20 = Quest(20, "Forest Quest"                      ,"Wander off into the haunted(?) forest"              ,[4,0,0,0] ,True ,"L21",[0,0,0,0,do_nothing],  "No effects in this version") #5
+    q21 = Quest(21, "Forest Quest"                      ,"Wander off into the haunted(?) forest"              ,[0,0,12,0],True ,"L22",[5,3,1,1,do_nothing],  "No effects in this version") #6
+    q22 = Quest(22, "Forest Quest"                      ,"Wander off into the haunted(?) forest"              ,[2,8,4,0] ,True ,"L23",[8,0,0,0,do_nothing],  "No effects in this version") #7
+    q23 = Quest(23, "Forest Quest"                      ,"Wander off into the haunted(?) forest"              ,[1,2,0,0] ,True ,"L24",[2,1,1,1,do_nothing],  "No effects in this version") #8
+
+    qList = [q0,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21,q22,q23]
+    
+

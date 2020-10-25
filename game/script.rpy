@@ -48,6 +48,53 @@ label start:
             player_4 = Player(slots[3])
             player_ARRAY.append(player_4)
 
+        Forest_decks = []
+        import copy 
+        Forest_decks = []
+        Fd1 = copy.deepcopy(qDeck_Forest)
+        Forest_decks.append(Fd1)
+        Fd2 = copy.deepcopy(qDeck_Forest)
+        Forest_decks.append(Fd2)
+        if Player_count > 3:
+            Fd3 = copy.deepcopy(qDeck_Forest)
+            Forest_decks.append(Fd3)
+        if Player_count > 4:
+            Fd4 = copy.deepcopy(qDeck_Forest)
+            Forest_decks.append(Fd4)
+        print("Decks:")
+        for each in Forest_decks:
+            random.shuffle(each)
+
+        for each in Forest_decks:
+            for x in each:
+            
+                print(x.ID,end = '')
+                print(" ", end = '')
+            print("Next deck")
+           
+        player_1.Forest_Deck = Fd1
+        player_2.Forest_Deck = Fd2
+        if Player_count > 3:
+            player_3.Forest_Deck = Fd3
+        if Player_count > 4:
+            player_4.Forest_Deck = Fd4
+
+        Used_Town_Deck = copy.deepcopy(qDeck_Town)
+        random.shuffle(Used_Town_Deck)
+
+
+    
+
+    python:
+        if(Hotseat):
+            for each in player_ARRAY:
+                if (each.Is_CPU()):
+                    #do CPU things
+                    print("do Cpu things")
+                if each.Is_Player_controlled():
+                    renpy.call_screen("Select_Quest_Screen",each)
+                    Hotseat=False
+    
         
 
     call screen Agent_Placement()
