@@ -23,6 +23,34 @@ init -3 python:
             self.occupation_slots = 1
             self.occupation = [9]
 
+        def place_hover_text(self,character):
+            VC_amount = self.get_Victory_Candy()
+            VC_amount = VC_amount * character.Victory_Candy_mod_place[self.ID][Turn]
+            if(VC_amount != 0):
+                VC_amount = VC_amount + character.Victory_Candy_ADD_place[self.ID][Turn]
+                VC_amount = int(VC_amount)
+
+            CC_amount = self.get_Candy_Corn()
+            CC_amount = CC_amount * character.Candy_Corn_mod_place[self.ID][Turn]
+            if(CC_amount != 0):
+                CC_amount = CC_amount + character.Candy_Corn_ADD_place[self.ID][Turn]
+                CC_amount = int(CC_amount)
+
+            Choco_amount = self.get_Chocolate()
+            Choco_amount = Choco_amount * character.Chocolate_mod_place[self.ID][Turn]
+            if(Choco_amount != 0):
+                Choco_amount = Choco_amount + character.Chocolate_ADD_place[self.ID][Turn]
+                Choco_amount = int(Choco_amount)
+
+            TS_amount = self.get_Trick_Supplies()
+            TS_amount = TS_amount * character.Trick_Supplies_mod_place[self.ID][Turn]
+            if(TS_amount != 0):
+                TS_amount = TS_amount + character.Trick_Supplies_ADD_place[self.ID][Turn]
+                TS_amount = int(TS_amount)
+            
+            #VC_amount , CC_amount , Choco_amount , TS_amount
+
+            return "Victory Candy: " + str(VC_amount) + "   Candy Corn: " + str(CC_amount) + "\nChocolate: " + str(Choco_amount) + "   Trick Supplies: " + str(TS_amount) + "\nOpen Slots: " + str(self.occupation.count(9))
 
         def can_be_occupied(self):
             return 9 in self.occupation

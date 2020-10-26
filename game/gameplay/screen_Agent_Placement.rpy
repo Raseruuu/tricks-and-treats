@@ -195,11 +195,11 @@ screen Agent_Placement(Character):
             #Actions
             if place_ARRAY[each - 1].can_be_occupied():
                 action Function(place_agent,Character,place_ARRAY[each - 1]) , Return()
-                hovered NullAction()
+                hovered Function(Michael,place_ARRAY[each - 1].place_hover_text(Character), False, False)
                 unhovered NullAction()
             else :
                 action NullAction()
-                hovered NullAction()
+                hovered Function(Michael,place_ARRAY[each - 1].place_hover_text(Character), False, False)
                 unhovered NullAction()
     use Base_UI
 ###########################################################

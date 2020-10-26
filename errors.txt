@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 105: invalid syntax
-        Turn++
+File "game/gameplay/Place.rpy", line 31: invalid syntax
+                VC_amount = (int)VC_amount
+                                          ^
     
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Oct 26 13:56:06 2020
+Mon Oct 26 15:57:36 2020

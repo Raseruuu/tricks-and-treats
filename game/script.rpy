@@ -107,8 +107,7 @@ label start:
             Turn = Turn + 1
             turn_step_reset()
 
-
-    jump gamestart
+    "Game End"
     # This ends the game.
 
     return
