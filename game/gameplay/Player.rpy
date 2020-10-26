@@ -3,7 +3,8 @@ init python:
 
     class Player:
 
-        def __init__(self,character):
+        def __init__(self,ID,character):
+            self.ID = ID
             if character == "Random":
                 self.character = assign_via_random()
                 
@@ -234,7 +235,7 @@ init python:
                 amount = amount + the_ADD
                 self.Trick_Supplies = self.Trick_Supplies + int(amount)
     #################################################################################
-        def receive_from_place_Victory_Candy(self,VC_ammount,place_ID):
+        def receive_from_place_Victory_Candy(self,VC_amount,place_ID):
             VC_amount = VC_amount * self.Victory_Candy_mod_place[place_ID][Turn]
             if(VC_amount != 0):
                 VC_amount = VC_amount + self.Victory_Candy_ADD_place[place_ID][Turn]
@@ -331,20 +332,20 @@ init python:
         # Turn is incremented before this function is called
         def player_turn_end(self):
             self.my_places.clear
-            self.agent_count = agents_at_turn[Turn]
+            self.agent_count = self.agents_at_turn[Turn]
         
 
         def harvest(self):
             for each in self.my_places:
-                self.receive_from_place_Victory_Candy(each.get_Victory_Candy,each.ID)
-                self.receive_from_place_Candy_Corn(each.get_Candy_Corn,each.ID)
-                self.receive_from_place_Chocolate(each.get_Chocolate,each.ID)
-                self.receive_from_place_Trick_Supplies(each.get_Trick_Supplies,each.ID)
+                self.receive_from_place_Victory_Candy(each.get_Victory_Candy(),each.ID)
+                self.receive_from_place_Candy_Corn(each.get_Candy_Corn(),each.ID)
+                self.receive_from_place_Chocolate(each.get_Chocolate(),each.ID)
+                self.receive_from_place_Trick_Supplies(each.get_Trick_Supplies(),each.ID)
 
-        def occupy(self,place_ID):
+        def occupy(self,place):
             self.agent_count = self.agent_count - 1
-            self.my_places.append(place_ARRAY[place_ID])
-            place_ARRAY[place_ID].occupied = True    
+            self.my_places.append(place)
+            
     ###############################################
         def Is_CPU(self):
             return self.CPU

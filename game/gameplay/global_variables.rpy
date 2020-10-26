@@ -33,6 +33,16 @@ init -1 python:
     Used_Town_Deck = copy.deepcopy(qDeck_Town)
     random.shuffle(Used_Town_Deck)
 
+    def turn_step_harvest():
+        for each in player_ARRAY:
+            each.harvest()
+
+    def turn_step_reset():
+        for each in player_ARRAY:
+            each.player_turn_end()
+        for each in place_ARRAY:
+            each.remove_all_occupants()
+
 
 
     Choice_nummber = 0
@@ -51,7 +61,15 @@ init -1 python:
     def assign_quest_to_player(quest,player):
         player.my_quest = quest    
     
+    def agent_assignment_phase_continue_check():
+        i = 0
+        for each in player_ARRAY:
+            i = i + each.agent_count
 
+        if i > 0:
+            return True 
+        else :
+            return False
 
     def assign_via_random():
         assign_i = random.randint(1, 4)

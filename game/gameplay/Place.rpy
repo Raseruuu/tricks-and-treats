@@ -20,29 +20,47 @@ init -3 python:
             self.Trick_Supplies_mod = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
             self.Trick_Supplies_ADD = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
+            self.occupation_slots = 1
+            self.occupation = [9]
+
+
+        def can_be_occupied(self):
+            return 9 in self.occupation
+            
+        def get_occupied(self,player):
+            if 9 in self.occupation:
+                self.occupation[self.occupation.index(9)] = player.ID
+
+        def remove_occupant(self,player):
+            if player.ID in self.occupation:
+                self.occupation[self.occupation.index(player.ID)] = 9
+
+        def remove_all_occupants(self):
+            self.occupation = [9]
+
         # belongs to the place class
         def get_Victory_Candy(self):
             amount = self.Victory_Candy * self.Victory_Candy_mod[Turn]
             if(amount != 0):
-                amount = amount + self.Victory_Candy_mod_ADD[Turn]
+                amount = amount + self.Victory_Candy_ADD[Turn]
                 return amount
             return 0.1
         def get_Candy_Corn(self):
             amount = self.Candy_Corn * self.Candy_Corn_mod[Turn]
             if(amount != 0):
-                amount = amount + self.Candy_Corn_mod_ADD[Turn]
+                amount = amount + self.Candy_Corn_ADD[Turn]
                 return amount
             return 0.1
         def get_Chocolate(self):
             amount = self.Chocolate * self.Chocolate_mod[Turn]
             if(amount != 0):
-                amount = amount + self.Chocolate_mod_ADD[Turn]
+                amount = amount + self.Chocolate_ADD[Turn]
                 return amount
             return 0.1
         def get_Trick_Supplies(self):
             amount = self.Trick_Supplies * self.Trick_Supplies_mod[Turn]
             if(amount != 0):
-                amount = amount + self.Trick_Supplies_mod_ADD[Turn]
+                amount = amount + self.Trick_Supplies_ADD[Turn]
                 return amount
             return 0.1
 #############################################################################################

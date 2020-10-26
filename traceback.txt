@@ -3,19 +3,13 @@
 While running game code:
   File "game/script.rpy", line 89, in script
     python:
-  File "game/script.rpy", line 96, in <module>
-    renpy.call_screen("Select_Quest_Screen",each)
-  File "game/gameplay/screen_Quest_Select.rpy", line 5, in execute
-    screen Select_Quest_Screen(Character):
-  File "game/gameplay/screen_Quest_Select.rpy", line 5, in execute
-    screen Select_Quest_Screen(Character):
-  File "game/gameplay/screen_Quest_Select.rpy", line 12, in execute
-    vbox:
-  File "game/gameplay/screen_Quest_Select.rpy", line 16, in execute
-    textbutton Character.Forest_Deck[Turn].name:
-  File "game/gameplay/screen_Quest_Select.rpy", line 16, in keywords
-    textbutton Character.Forest_Deck[Turn].name:
-NameError: name 'Forest_Deck' is not defined
+  File "game/script.rpy", line 108, in <module>
+    turn_step_reset()
+  File "game/gameplay/global_variables.rpy", line 42, in turn_step_reset
+    each.player_turn_end()
+  File "game/gameplay/Player.rpy", line 336, in player_turn_end
+    
+NameError: global name 'agents_at_turn' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -26,44 +20,15 @@ Full traceback:
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 96, in <module>
-    renpy.call_screen("Select_Quest_Screen",each)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 2905, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
-    callback(self)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
-    self.update()
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
-    self.screen.function(**self.scope)
-  File "game/gameplay/screen_Quest_Select.rpy", line 5, in execute
-    screen Select_Quest_Screen(Character):
-  File "game/gameplay/screen_Quest_Select.rpy", line 5, in execute
-    screen Select_Quest_Screen(Character):
-  File "game/gameplay/screen_Quest_Select.rpy", line 12, in execute
-    vbox:
-  File "game/gameplay/screen_Quest_Select.rpy", line 16, in execute
-    textbutton Character.Forest_Deck[Turn].name:
-  File "game/gameplay/screen_Quest_Select.rpy", line 16, in keywords
-    textbutton Character.Forest_Deck[Turn].name:
-  File "<screen language>", line 17, in <module>
-NameError: name 'Forest_Deck' is not defined
+  File "game/script.rpy", line 108, in <module>
+    turn_step_reset()
+  File "game/gameplay/global_variables.rpy", line 42, in turn_step_reset
+    each.player_turn_end()
+  File "game/gameplay/Player.rpy", line 336, in player_turn_end
+    
+NameError: global name 'agents_at_turn' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Tricks and Treats 1.0
-Mon Oct 26 09:32:01 2020
+Mon Oct 26 15:08:00 2020

@@ -32,20 +32,20 @@ label start:
     
     python: 
         global slots
-        player_1 = Player(slots[0])
+        player_1 = Player(0,slots[0])
         print (player_1.character)
         
-        player_2 = Player(slots[1])
+        player_2 = Player(1,slots[1])
         player_ARRAY = [player_1,player_2]
         print(player_ARRAY[0].character)
         print(player_ARRAY[0].character)
         print(player_ARRAY[0].character)
         print(player_ARRAY[0].character)
         if Player_count > 2:
-            player_3 = Player(slots[2])
+            player_3 = Player(2,slots[2])
             player_ARRAY.append(player_3)
         if Player_count > 3:
-            player_4 = Player(slots[3])
+            player_4 = Player(3,slots[3])
             player_ARRAY.append(player_4)
 
         import copy 
@@ -87,24 +87,27 @@ label start:
     
 
     python:
-        if(Hotseat):
-            for each in player_ARRAY:
-                if (each.Is_CPU()):
-                    #do CPU things
-                    print("do Cpu things")
-                if each.Is_Player_controlled():
-                    renpy.call_screen("Select_Quest_Screen",each)
-                    Hotseat=False
-    
+        while Turn < 8 :
+            if Hotseat:
+                for each in player_ARRAY:
+                    if (each.Is_CPU()):
+                        #do CPU things
+                        print("do Cpu things")
+                    if each.Is_Player_controlled():
+                        renpy.call_screen("Select_Quest_Screen",each)
         
+            
+            if Hotseat:
+                while agent_assignment_phase_continue_check():
+                    for each in player_ARRAY:
+                        if each.agent_count > 0:
+                            renpy.call_screen("Agent_Placement",each)
 
-    call screen Agent_Placement()
+            turn_step_harvest()
+            Turn = Turn + 1
+            turn_step_reset()
 
-    scene bg room
 
-
-    p "Hello!!"
-    "World!"
     jump gamestart
     # This ends the game.
 

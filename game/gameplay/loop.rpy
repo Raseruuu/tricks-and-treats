@@ -11,10 +11,6 @@ label gamestart:
         jump gamestart
     return
 
-init python:
-    def turn_step_harvest():
-        for each in players:
-            each.harvest()
 
 init python:
     def game_loop():
