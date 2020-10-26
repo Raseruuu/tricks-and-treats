@@ -201,6 +201,8 @@ screen Agent_Placement(Character):
                 action NullAction()
                 hovered Function(Michael,place_ARRAY[each - 1].place_hover_text(Character), False, False)
                 unhovered NullAction()
+
+    label "Current TURN: [Turn]" xalign 0.5 yalign 0.05 xanchor 0.5 yanchor 0.5 
     use Base_UI
 ###########################################################
 

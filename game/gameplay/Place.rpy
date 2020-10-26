@@ -50,7 +50,7 @@ init -3 python:
             
             #VC_amount , CC_amount , Choco_amount , TS_amount
 
-            return "Victory Candy: " + str(VC_amount) + "   Candy Corn: " + str(CC_amount) + "\nChocolate: " + str(Choco_amount) + "   Trick Supplies: " + str(TS_amount) + "\nOpen Slots: " + str(self.occupation.count(9))
+            return "  {image=Victory_Candy_text_icon.png} " + str(VC_amount) + "   {image=Candy_Corn_text_icon.png} " + str(CC_amount) + "\n{image=Chocolate_text_icon.png} " + str(Choco_amount) + "   {image=Trick_Supplies_text_icon.png} " + str(TS_amount) + "\nOpen Slots: " + str(self.occupation.count(9))
 
         def can_be_occupied(self):
             return 9 in self.occupation

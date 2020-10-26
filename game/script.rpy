@@ -104,6 +104,9 @@ label start:
                             renpy.call_screen("Agent_Placement",each)
 
             turn_step_harvest()
+            if Hotseat:
+                for each in player_ARRAY:
+                    renpy.call_in_new_context(each.my_quest.LABEL)
             Turn = Turn + 1
             turn_step_reset()
 

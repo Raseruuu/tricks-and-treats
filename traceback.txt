@@ -3,25 +3,13 @@
 While running game code:
   File "game/script.rpy", line 89, in script
     python:
-  File "game/script.rpy", line 104, in <module>
-    renpy.call_screen("Agent_Placement",each)
-  File "game/gameplay/screen_Agent_Placement.rpy", line 183, in execute
-    screen Agent_Placement(Character):
-  File "game/gameplay/screen_Agent_Placement.rpy", line 183, in execute
-    screen Agent_Placement(Character):
-  File "game/gameplay/screen_Agent_Placement.rpy", line 187, in execute
-    for each in range(1,len(place_ARRAY)+1):
-  File "game/gameplay/screen_Agent_Placement.rpy", line 188, in execute
-    imagebutton:
-  File "game/gameplay/screen_Agent_Placement.rpy", line 188, in keywords
-    imagebutton:
-  File "game/gameplay/screen_Agent_Placement.rpy", line 196, in keywords
-    if place_ARRAY[each - 1].can_be_occupied():
-  File "game/gameplay/screen_Agent_Placement.rpy", line 196, in keywords
-    if place_ARRAY[each - 1].can_be_occupied():
-  File "game/gameplay/Place.rpy", line 28, in place_hover_text
-    VC_amount = VC_amount * self.Victory_Candy_mod_place[self.ID][Turn]
-AttributeError: 'Place' object has no attribute 'Victory_Candy_mod_place'
+  File "game/script.rpy", line 97, in <module>
+    renpy.call_screen("Select_Quest_Screen",each)
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/gameplay/global_variables.rpy", line 63, in assign_quest_to_player
+    print(player.my_quest.name)
+AttributeError: 'Player' object has no attribute 'name'
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -32,50 +20,43 @@ Full traceback:
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 104, in <module>
-    renpy.call_screen("Agent_Placement",each)
+  File "game/script.rpy", line 97, in <module>
+    renpy.call_screen("Select_Quest_Screen",each)
   File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 2905, in call_screen
     rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
   File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
-    callback(self)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
-    self.update()
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
-    self.screen.function(**self.scope)
-  File "game/gameplay/screen_Agent_Placement.rpy", line 183, in execute
-    screen Agent_Placement(Character):
-  File "game/gameplay/screen_Agent_Placement.rpy", line 183, in execute
-    screen Agent_Placement(Character):
-  File "game/gameplay/screen_Agent_Placement.rpy", line 187, in execute
-    for each in range(1,len(place_ARRAY)+1):
-  File "game/gameplay/screen_Agent_Placement.rpy", line 188, in execute
-    imagebutton:
-  File "game/gameplay/screen_Agent_Placement.rpy", line 188, in keywords
-    imagebutton:
-  File "game/gameplay/screen_Agent_Placement.rpy", line 196, in keywords
-    if place_ARRAY[each - 1].can_be_occupied():
-  File "game/gameplay/screen_Agent_Placement.rpy", line 196, in keywords
-    if place_ARRAY[each - 1].can_be_occupied():
-  File "<screen language>", line 198, in <module>
-  File "game/gameplay/Place.rpy", line 28, in place_hover_text
-    VC_amount = VC_amount * self.Victory_Candy_mod_place[self.ID][Turn]
-AttributeError: 'Place' object has no attribute 'Victory_Candy_mod_place'
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3518, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 714, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\behavior.py", line 962, in event
+    return handle_click(self.clicked)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\behavior.py", line 897, in handle_click
+    rv = run(action)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\behavior.py", line 313, in run
+    new_rv = run(i, *args, **kwargs)
+  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\display\behavior.py", line 320, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/gameplay/global_variables.rpy", line 63, in assign_quest_to_player
+    print(player.my_quest.name)
+AttributeError: 'Player' object has no attribute 'name'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Tricks and Treats 1.0
-Mon Oct 26 16:00:25 2020
+Mon Oct 26 17:05:20 2020

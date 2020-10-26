@@ -29,45 +29,45 @@ init -2 python:
 
 ######################################################################################
         def get_required_Victory_Candy(self,player):
-            n = self.required_Victory_Candy * player.quest_required_Victory_Candy_mod
+            n = self.required_Victory_Candy * player.quest_required_Victory_Candy_mod[Turn]
             if(n > 0):
-                return (int)(n + player.quest_required_Victory_Candy_ADD)
+                return int(n + player.quest_required_Victory_Candy_ADD[Turn])
             return 0
         def get_required_Candy_Corn(self,player):
-            n = self.required_Candy_Corn * player.quest_required_Candy_Corn_mod
+            n = self.required_Candy_Corn * player.quest_required_Candy_Corn_mod[Turn]
             if(n > 0):
-                return (int)(n + player.quest_required_Candy_Corn_ADD)
+                return int(n + player.quest_required_Candy_Corn_ADD[Turn])
             return 0
         def get_required_Chocolate(self,player):
-            n = self.required_Chocolate * player.quest_required_Chocolate_mod
+            n = self.required_Chocolate * player.quest_required_Chocolate_mod[Turn]
             if(n > 0):
-                return (int)(n + player.quest_required_Chocolate_ADD)
+                return int(n + player.quest_required_Chocolate_ADD[Turn])
             return 0
         def get_required_Trick_Supplies(self,player):
-            n = self.required_Trick_Supplies * player.quest_required_Trick_Supplies_mod
+            n = self.required_Trick_Supplies * player.quest_required_Trick_Supplies_mod[Turn]
             if(n > 0):
-                return (int)(n + player.quest_required_Trick_Supplies_ADD)
+                return int(n + player.quest_required_Trick_Supplies_ADD[Turn])
             return 0
 #########################################################################################
         def get_reward_Victory_Candy(self,player):
-            n = self.reward_Victory_Candy * player.quest_reward_Victory_Candy_mod
+            n = self.reward_Victory_Candy * player.quest_reward_Victory_Candy_mod[Turn]
             if(n > 0):
-                return (int)(n + player.quest_reward_Victory_Candy_ADD)
+                return int(n + player.quest_reward_Victory_Candy_ADD[Turn])
             return 0
         def get_reward_Candy_Corn(self,player):
-            n = self.reward_Candy_Corn * player.quest_reward_Candy_Corn_mod
+            n = self.reward_Candy_Corn * player.quest_reward_Candy_Corn_mod[Turn]
             if(n > 0):
-                return (int)(n + player.quest_reward_Candy_Corn_ADD)
+                return int(n + player.quest_reward_Candy_Corn_ADD[Turn])
             return 0
         def get_reward_Chocolate(self,player):
-            n = self.reward_Chocolate * player.quest_reward_Chocolate_mod
+            n = self.reward_Chocolate * player.quest_reward_Chocolate_mod[Turn]
             if(n > 0):
-                return (int)(n + player.quest_reward_Chocolate_ADD)
+                return int(n + player.quest_reward_Chocolate_ADD[Turn])
             return 0
         def get_reward_Trick_Supplies(self,player):
-            n = self.reward_Trick_Supplies * player.quest_reward_Trick_Supplies_mod
+            n = self.reward_Trick_Supplies * player.quest_reward_Trick_Supplies_mod[Turn]
             if(n > 0):
-                return (int)(n + player.quest_reward_Trick_Supplies_ADD)
+                return int(n + player.quest_reward_Trick_Supplies_ADD[Turn])
             return 0
 ########################################################################################
         def get_name(self):
@@ -75,18 +75,18 @@ init -2 python:
         def get_description(self):
             return self.description
         def get_formated_info(self,player):
-            the_string = self.get_name() + "|" + self.get_description() + "\n" 
+            the_string =  self.get_description() + "\nRequirements: " 
             if self.get_required_Victory_Candy(player) > 0.9: 
-                the_string = the_string + "{image=Victory_Candy_text_icon.png}" + " " +  self.get_required_Victory_Candy(player)
+                the_string = the_string + "{image=Victory_Candy_text_icon.png}" + " " +  str(self.get_required_Victory_Candy(player))+ " "
             if(self.get_required_Candy_Corn(player) > 0.9): 
-                the_string = the_string + "{image=Candy_Corn_text_icon.png}" + " " +  self.get_required_Candy_Corn(player)
-            if(self.get_required_Chocolate(player) > 0.9): the_string = the_string + "{image=Chocolate_text_icon.png}" + " " +  self.get_required_Chocolate(player)
-            if(self.get_required_Trick_Supplies(player) > 0.9): the_string = the_string + "{image=Trick_Supplies_text_icon.png}" + " " +  self.get_required_Trick_Supplies(player)
-            the_string = the_string + "\n"
-            if(self.get_reward_Victory_Candy(player) > 0.9): the_string = the_string + "{image=Victory_Candy_text_icon.png}" + " " +  self.get_reward_Victory_Candy(player)
-            if(self.get_reward_Candy_Corn(player) > 0.9): the_string = the_string + "{image=Candy_Corn_text_icon.png}" + " " +  self.get_reward_Candy_Corn(player)
-            if(self.get_reward_Chocolate(player) > 0.9): the_string = the_string + "{image=Chocolate_text_icon.png}" + " " +  self.get_reward_Chocolate(player)
-            if(self.get_reward_Trick_Supplies(player) > 0.9): the_string = the_string + "{image=Trick_Supplies_text_icon.png}" + " " +  self.get_reward_Trick_Supplies(player)
+                the_string = the_string + "{image=Candy_Corn_text_icon.png}" + " " +  str(self.get_required_Candy_Corn(player))+ " "
+            if(self.get_required_Chocolate(player) > 0.9): the_string = the_string + "{image=Chocolate_text_icon.png}" + " " +  str(self.get_required_Chocolate(player))+ " "
+            if(self.get_required_Trick_Supplies(player) > 0.9): the_string = the_string + "{image=Trick_Supplies_text_icon.png}" + " " +  str(self.get_required_Trick_Supplies(player))+ " "
+            the_string = the_string + "\nRewards: "
+            if(self.get_reward_Victory_Candy(player) > 0.9): the_string = the_string + "{image=Victory_Candy_text_icon.png}" + " " +  str(self.get_reward_Victory_Candy(player)) + " "
+            if(self.get_reward_Candy_Corn(player) > 0.9): the_string = the_string + "{image=Candy_Corn_text_icon.png}" + " " +  str(self.get_reward_Candy_Corn(player))+ " "
+            if(self.get_reward_Chocolate(player) > 0.9): the_string = the_string + "{image=Chocolate_text_icon.png}" + " " +  str(self.get_reward_Chocolate(player))+ " "
+            if(self.get_reward_Trick_Supplies(player) > 0.9): the_string = the_string + "{image=Trick_Supplies_text_icon.png}" + " " +  str(self.get_reward_Trick_Supplies(player))+ " "
             the_string = the_string + "\n"
             the_string = the_string + self.reward_effect_description
             return the_string

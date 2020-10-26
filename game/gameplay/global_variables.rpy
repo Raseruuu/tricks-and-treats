@@ -58,8 +58,9 @@ init -1 python:
         else :
             return True
 
-    def assign_quest_to_player(quest,player):
+    def assign_quest_to_player(player,quest):
         player.my_quest = quest    
+        print(player.my_quest.name)
     
     def agent_assignment_phase_continue_check():
         i = 0
