@@ -48,7 +48,6 @@ label start:
             player_4 = Player(slots[3])
             player_ARRAY.append(player_4)
 
-        Forest_decks = []
         import copy 
         Forest_decks = []
         Fd1 = copy.deepcopy(qDeck_Forest)
@@ -71,8 +70,10 @@ label start:
                 print(x.ID,end = '')
                 print(" ", end = '')
             print("Next deck")
-           
+        
+
         player_1.Forest_Deck = Fd1
+        print("here")
         player_2.Forest_Deck = Fd2
         if Player_count > 3:
             player_3.Forest_Deck = Fd3

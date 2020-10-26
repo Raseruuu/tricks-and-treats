@@ -23,6 +23,8 @@ init python:
             self.agents_at_turn = [2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,3,3,3]
 
             self.my_places = []
+
+            self.my_quest = 1
             
             self.Victory_Candy_mod_place = [
                 [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],

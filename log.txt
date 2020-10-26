@@ -1,4 +1,4 @@
-Sun Oct 25 22:27:03 2020
+Mon Oct 26 09:33:10 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
@@ -7,27 +7,27 @@ Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.02s
-Loading script took 0.19s
+Loading script took 0.09s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.06s
-Loading analysis data took 0.05s
+Loading analysis data took 0.04s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Michael\\AppData\\Roaming/RenPy/backups\\tricks-and-treats':
-Dump and make backups. took 0.05s
+Dump and make backups. took 0.06s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.07s
+Creating interface object took 0.06s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.01s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.07s
+Save screen analysis took 0.06s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.18s
 Save bytecode. took 0.05s
@@ -38,7 +38,7 @@ Interface start took 0.02s
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Screen sizes: virtual=(1920, 1080) physical=(1171, 659) drawable=(1171, 659)
 Vendor: 'NVIDIA Corporation'
 Renderer: 'GeForce GTX 1660 Ti/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 432.00'
@@ -451,23 +451,24 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.89700007439s
+Total time until interface ready: 1.73100018501s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.017667 seconds.
-- Frame drawn at 0.017667 seconds.
-- Frame drawn at 0.024667 seconds.
-- Frame drawn at 0.042667 seconds.
-- 0.042667 seconds to render 5 frames.
+- Frame drawn at 0.018667 seconds.
+- Frame drawn at 0.018667 seconds.
+- Frame drawn at 0.019667 seconds.
+- Frame drawn at 0.036667 seconds.
+- 0.036667 seconds to render 5 frames.
+Random Value:
+2
+Kitsune
 Random Value:
 1
-Succubus
-Random Value:
-4
-Succubus
-Succubus
-Succubus
-Succubus
+Kitsune
+Kitsune
+Kitsune
+Kitsune
 Decks:
-19 20 17 18 21 23 22 16 Next deck
-21 16 22 17 18 19 23 20 Next deck
+18 23 20 19 22 16 21 17 Next deck
+19 21 22 17 20 18 23 16 Next deck
+here

@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/gameplay/Quest.rpy", line 103: invalid syntax
-    def do_nothing:
-                   ^
-    
+File "game/gameplay/screen_Quest_Select.rpy", line 17: u'Function' is not a keyword argument or valid child for the textbutton statement.
+    action action Function(assign_quest_to_player,Character,Forest_Deck[Turn])
+                          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Oct 25 20:09:26 2020
+Mon Oct 26 09:24:16 2020

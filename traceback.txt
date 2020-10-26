@@ -1,9 +1,9 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 88, in script
+  File "game/script.rpy", line 89, in script
     python:
-  File "game/script.rpy", line 95, in <module>
+  File "game/script.rpy", line 96, in <module>
     renpy.call_screen("Select_Quest_Screen",each)
   File "game/gameplay/screen_Quest_Select.rpy", line 5, in execute
     screen Select_Quest_Screen(Character):
@@ -11,22 +11,22 @@ While running game code:
     screen Select_Quest_Screen(Character):
   File "game/gameplay/screen_Quest_Select.rpy", line 12, in execute
     vbox:
-  File "game/gameplay/screen_Quest_Select.rpy", line 13, in execute
-    for i in range(Turn*2,Turn*2+2):
-  File "game/gameplay/screen_Quest_Select.rpy", line 14, in execute
-    textbutton Character.Forest_Deck[i]:
-Exception: Cannot display <store.Quest object at 0x051D65B0> as text.
+  File "game/gameplay/screen_Quest_Select.rpy", line 16, in execute
+    textbutton Character.Forest_Deck[Turn].name:
+  File "game/gameplay/screen_Quest_Select.rpy", line 16, in keywords
+    textbutton Character.Forest_Deck[Turn].name:
+NameError: name 'Forest_Deck' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 88, in script
+  File "game/script.rpy", line 89, in script
     python:
   File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 95, in <module>
+  File "game/script.rpy", line 96, in <module>
     renpy.call_screen("Select_Quest_Screen",each)
   File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 2905, in call_screen
     rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
@@ -56,17 +56,14 @@ Full traceback:
     screen Select_Quest_Screen(Character):
   File "game/gameplay/screen_Quest_Select.rpy", line 12, in execute
     vbox:
-  File "game/gameplay/screen_Quest_Select.rpy", line 13, in execute
-    for i in range(Turn*2,Turn*2+2):
-  File "game/gameplay/screen_Quest_Select.rpy", line 14, in execute
-    textbutton Character.Forest_Deck[i]:
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 986, in _textbutton
-    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
-  File "C:\Users\Michael\Desktop\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 1471, in __init__
-    raise Exception("Cannot display {0!r} as text.".format(i))
-Exception: Cannot display <store.Quest object at 0x051D65B0> as text.
+  File "game/gameplay/screen_Quest_Select.rpy", line 16, in execute
+    textbutton Character.Forest_Deck[Turn].name:
+  File "game/gameplay/screen_Quest_Select.rpy", line 16, in keywords
+    textbutton Character.Forest_Deck[Turn].name:
+  File "<screen language>", line 17, in <module>
+NameError: name 'Forest_Deck' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Tricks and Treats 1.0
-Sun Oct 25 22:25:26 2020
+Mon Oct 26 09:32:01 2020

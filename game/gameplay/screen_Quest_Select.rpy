@@ -12,6 +12,7 @@ screen Select_Quest_Screen(Character):
     vbox:
         for i in range(Turn*2,Turn*2+2):
             textbutton Used_Town_Deck[i].name: 
-                action NullAction()
+                action Function(assign_quest_to_player,Character,Used_Town_Deck[i]) , Return()
+
         textbutton Character.Forest_Deck[Turn].name:
-            action NullAction()
+            action Function(assign_quest_to_player,Character,Character.Forest_Deck[Turn]) , Return()

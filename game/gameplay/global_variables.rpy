@@ -48,7 +48,8 @@ init -1 python:
         else :
             return True
 
-
+    def assign_quest_to_player(quest,player):
+        player.my_quest = quest    
     
 
 
