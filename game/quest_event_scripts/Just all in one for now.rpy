@@ -1,7 +1,4 @@
-﻿image gura = "image11.jpg"
-
-
-label L1:
+﻿label L1:
     "This is the event for: Investigate the Ghost House"
     return
 label L2:
@@ -29,9 +26,9 @@ label L9:
     "This is the event for: Potatoe"
     return
 label L10:
-    show gura at center
+
     "This is the event for: a"
-    hide gura
+    "Shark"
     return
 label L11:
     "This is the event for: Investigate Ghost Lights"
