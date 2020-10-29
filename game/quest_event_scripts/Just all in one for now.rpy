@@ -1,4 +1,17 @@
-﻿label L1:
+﻿
+label Vampire_Intro:
+    "I am a Vampire."
+    return
+label Kitsune_Intro:
+    "I am cute"
+    return
+label Slime_Intro:
+    "Slimes are the best!"
+    return 
+label Succubus_Intro:
+    "No lewd handholding tonight!"
+    return
+label L1:
     "This is the event for: Investigate the Ghost House"
     return
 label L2:

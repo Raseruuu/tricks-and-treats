@@ -1,13 +1,13 @@
-Tue Oct 27 17:34:09 2020
+Thu Oct 29 14:55:12 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
 
 Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
-Loader init took 0.02s
+Loader init took 0.01s
 Loading error handling took 0.02s
-Loading script took 0.08s
+Loading script took 0.11s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -15,24 +15,25 @@ Running init code took 0.06s
 Loading analysis data took 0.04s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Michael\\AppData\\Roaming/RenPy/backups\\tricks-and-treats':
 Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.01s
 DPI scale factor: 1.000000
-Creating interface object took 0.07s
+Creating interface object took 0.06s
 Cleaning stores took 0.00s
-Init translation took 0.01s
+Init translation took 0.02s
 Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.06s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.05s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.03s
+Interface start took 0.02s
 
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
@@ -450,26 +451,24 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.64600014687s
+Total time until interface ready: 1.54799985886s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.017667 seconds.
 - Frame drawn at 0.018667 seconds.
-- Frame drawn at 0.028666 seconds.
-- Frame drawn at 0.045666 seconds.
-- 0.045666 seconds to render 5 frames.
-Random Value:
-2
+- Frame drawn at 0.018667 seconds.
+- Frame drawn at 0.022666 seconds.
+- Frame drawn at 0.039667 seconds.
+- 0.039667 seconds to render 5 frames.
 Kitsune
-Random Value:
-4
 Kitsune
 Kitsune
 Kitsune
 Kitsune
 Decks:
-17 23 22 18 16 19 21 20 Next deck
-16 17 22 21 23 18 19 20 Next deck
+22 19 20 16 18 17 21 23 Next deck
+19 16 20 18 17 23 21 22 Next deck
 here
-Codeing Quests the true Horror
-Bribeing kids
+Ghost Attack
+Ghost Attack
+Forest Quest
+Potatoe

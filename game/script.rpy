@@ -84,7 +84,8 @@ label start:
         random.shuffle(Used_Town_Deck)
 
 
-    
+    ####################################################################################
+    #call intro
 
     python:
         while Turn < 8 :

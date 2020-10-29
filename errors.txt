@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/quest_event_scripts/Just all in one for now.rpy", line 29: expected 'image_name_component' not found.
-    show "image11.jpg"
-         ^
-
-File "game/quest_event_scripts/Just all in one for now.rpy", line 31: expected 'image_name_component' not found.
-    hide "image11.jpg"
-         ^
+File "game/quest_event_scripts/Just all in one for now.rpy", line 3: expected statement.
+    for a_player in player_ARRAY:
+                 ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Oct 26 16:56:27 2020
+Thu Oct 29 14:54:39 2020
